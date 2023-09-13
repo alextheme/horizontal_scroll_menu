@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{color:#fff; font-family:arial; font-weight:bold; font-size:40px; }
+        .container{ max-width:600px; margin:0 auto; border:solid 10px green; padding:10px; margin-top:40px;}
+        .container *{padding:10px;background:#aaa; border:dashed 5px #000;}
+        .container * + *{margin-top:20px;}
+        .header, .footer{border-color: red;}
+        .content{min-height:1000px;}
+
+        .header{position:-webkit-sticky; position:sticky; top:0;}
+        .footer{position:-webkit-sticky; position:sticky; bottom:0;}
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="header">HEADER</header>
+        <div class="content">MAIN CONTENT</div>
+        <footer class="footer">FOOTER</footer>
+    </main>
+    <div class="container">
+        <div style="height: 800px; background-color: #1f8597;"></div>
+    </div>
+
+</body>
+</html>
