@@ -76,7 +76,7 @@ body {
 
 }
 
-.text {   
+.block {   
     background: cadetblue;
     padding-top: 130px;
     margin-top: -120px;
@@ -84,18 +84,18 @@ body {
     background-clip: content-box;
 }
 
-.text div {
+.block div {
     height: 50vh;
     padding: 20px;
 }
 
-.text span {
+.block span {
     display: block;
     padding: 20px;
     font-weight: 900;
 }
 
-.text--active {
+.block--active {
     background-color: #0006ff;
     color: #ffffff;
 }

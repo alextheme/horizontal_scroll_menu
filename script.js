@@ -4,21 +4,21 @@ const menuList = document.querySelector('.menu__list');
 const content = document.querySelector('.content');
 
 const activeM = 'menu__item--active';
-const activeT = 'text--active';
+const activeT = 'block--active';
 
 // добавления элементов в список:
 for (let i = 1; i <= 25; i++) {
     // menu
     const li = document.createElement('li')
     li.classList.add('menu__item')
-    li.dataset.contentId = `text_${i}`
+    li.dataset.contentId = `block_${i}`
     li.textContent = `Элемент ${i}`
     menuList.appendChild(li)
 
     // Content
     const textBox = document.createElement('div')
-    textBox.classList.add('text')
-    textBox.id = 'text_' + i
+    textBox.classList.add('block')
+    textBox.id = 'block_' + i
     const div = document.createElement('div')
     div.textContent = `${i} - Qui laboriosam, id odio deserunt perferendis architecto optio aperiam beatae at fuga eligendi blanditiis deleniti modi ad incidunt libero. Ad laboriosam asperiores fuga quae sunt dolorem natus temporibus impedit eius.
     Possimus delectus ducimus dolores deleniti voluptate, quaerat fuga, dicta dolorum a in ipsa itaque, unde culpa est tempora. Deserunt cupiditate officiis reiciendis suscipit beatae sit odit incidunt ad culpa vitae?
@@ -29,7 +29,7 @@ for (let i = 1; i <= 25; i++) {
 }
 
 const menuItems = document.querySelectorAll('.menu__item')
-const textBoxes = document.querySelectorAll('.text')
+const textBoxes = document.querySelectorAll('.block')
 
 // padding bottom for content
 const lastElemMenu = content.lastElementChild
@@ -85,8 +85,8 @@ window.addEventListener('scroll', function(e) {
     }
 
     timeScroll = setTimeout(() => {
-        const textActive = document.querySelector('.text.text--active')
-        // document.querySelectorAll('.text.text--active').forEach(t => t.classList.remove(activeT))
+        const textActive = document.querySelector('.block.block--active')
+        // document.querySelectorAll('.block.block--active').forEach(t => t.classList.remove(activeT))
 
         textBoxes.forEach(t => {
             const textTop = t.offsetTop
